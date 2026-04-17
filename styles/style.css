@@ -51,3 +51,116 @@
   font-size: var(--subtitle-size);
   letter-spacing: -7%;
 }
+
+.main {
+margin-block-start: 100px;
+display: flex;
+flex-direction: column;
+gap: 50px;
+}
+.card {
+  background-color: #fff;
+  border: 2px solid #000;
+}
+
+.card__title {
+ font-variation-settings: 'wght' var(--title-weight);
+ font-size: 18px;
+ padding: 5px 10px 6px;
+ letter-spacing: 1.7%;
+}
+
+.card__image-wrapper {
+  position: relative;
+  border-block-start: 2px solid #000;
+  border-block-end: 2px solid #000;
+  overflow: hidden;
+}
+
+.card__image-label {
+  position: absolute;
+  inset-block-start: 25px;
+  inset-inline-end: 25px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 1;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  z-index: 1;
+   /* 
+    Фоллбэк для браузеров без поддержки text-stroke:
+    создаём контур через text-shadow.
+  */
+  color: #000;
+  text-shadow:
+    -1px 0 var(--label-stroke-color),
+    0 1px var(--label-stroke-color),
+    1px 0 var(--label-stroke-color),
+    0 -1px var(--label-stroke-color);
+}
+
+@supports ((
+      (text-stroke: 1px var(--themes-backgroud-color)) or
+        (-webkit-text-stroke: 1px var(--themes-backgroud-color))
+    )
+    and (mix-blend-mode: hard-light)
+) 
+{
+  .card__image-label {
+    -webkit-text-stroke: 1px var(--label-stroke-color);
+    text-stroke: 1px var(--label-stroke-color);
+    text-shadow: none;
+  }
+}
+
+.card__image {
+ display: block;
+ inline-size: 100%;
+  block-size: auto;
+}
+
+.card__content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.card__text {
+  font-size: 18px;
+  line-height: 1.17;
+}
+
+.card__buttons {
+  /* 
+    Кнопки стоят справа, как в макете.
+  */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  /* Расстояние между сердцем и кнопкой Like */
+  gap: 6px;
+}
+
+.card__icon-button {
+  /* 
+    У кнопки сердечка нет фона и рамки по умолчанию.
+    Декоративная рамка/focus будут задаваться отдельно.
+  */
+  border: none;
+  padding: 0;
+  background-color: transparent;
+
+  /* Интерактивный курсор */
+  cursor: pointer;
+}
+
+.card__like-button {
+  /* 
+    Минимальные размеры кнопки Like
+    помогают приблизиться к макету.
+  */
+  min-inline-size: 130px;
+  min-block-size: 38px;
+}

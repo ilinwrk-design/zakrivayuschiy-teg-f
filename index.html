@@ -20,8 +20,72 @@
       <h1 class="header__title">&lt;/HTML&gt;</h1>
       <p class="header__subtitle">Закрывающий тег</p>
     </header>
-    
-    <main class="main">
+     <main class="main"></main>
+    <article class="card content-section">
+       <h2 class="card__title">
+      Фритрек и нулевой спринт: Подготовка к работе
+    </h2>
+     <div class="card__image-wrapper">
+      <span class="card__image-label" aria-hidden="true">
+        &lt;/HTML&gt;
+      </span>
+       <img
+        class="card__image"
+        src="./images/content/image-1.png"
+        alt="Белый фургон на ночной дороге"
+        loading="lazy"
+      >
+    </div>
+    <div class="card__content">
+      <p class="card__text">
+        Это было самое начало пути. На этом этапе важно было проникнуться
+        основами и настроиться на учёбу. И, возможно, подумать, как новые
+        знания могут повлиять на ваше будущее.
+      </p>
+      <p class="card__text">
+        Место для ваших воспоминаний о начале обучения.
+      </p>
+      <div class="card__buttons">
+        <!-- 
+          Кнопка-обёртка для иконки сердца.
+          card__icon-button — обязательный класс для скрипта.
+        -->
+        <button
+          class="card__icon-button"
+          type="button"
+          aria-label="Поставить лайк"
+        >
+          <!-- 
+            like-icon — обязательный класс для скрипта.
+            SVG сердца позже заменишь на финальную иконку из проекта.
+          -->
+          <svg
+            class="like-icon"
+            viewBox="0 0 39 36"
+            width="39"
+            height="36"
+            aria-hidden="true"
+          >
+            <!-- Временная заглушка, позже сюда вставится правильное сердце -->
+            <path d="M12 3h3v3h-3z" fill="currentColor" />
+            <path d="M15 3h3v3h-3z" fill="currentColor" />
+            <path d="M21 3h3v3h-3z" fill="currentColor" />
+            <path d="M24 3h3v3h-3z" fill="currentColor" />
+          </svg>
+        </button>
+
+        <!-- 
+          Кнопка Like.
+          card__like-button — обязательный класс для скрипта.
+          button — базовый класс для стилизации кнопок.
+        -->
+        <button class="card__like-button button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </div>
+    </article>
+   
 
     </main>
     <script src="./scripts/like.js"></script>

@@ -25,4 +25,5 @@
   --header-padding-inline: clamp(16px, 5vw, 24px);
   --title-size: clamp(49px, 10vw, 65px);
   --subtitle-size: clamp(14px, 4vw, 23px);
+  --label-stroke-color: #fff;
 }
