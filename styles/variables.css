@@ -26,4 +26,7 @@
   --title-size: clamp(49px, 10vw, 65px);
   --subtitle-size: clamp(14px, 4vw, 23px);
   --label-stroke-color: #fff;
+   --accent-color: #000;
+  --background-color: #fff;
+ --button-text-color: #fff;
 }
