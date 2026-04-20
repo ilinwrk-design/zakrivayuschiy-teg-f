@@ -68,7 +68,6 @@ gap: 50px;
  font-variation-settings: 'wght' var(--title-weight);
  font-size: 18px;
  padding: 4px 10px 6px;
- letter-spacing: 1.7%;
 }
 
 .card__image-wrapper {
@@ -170,17 +169,110 @@ aspect-ratio: 1/1;
 }
 
 .card__image_filter_gray {
-   filter: grayscale(0.8);
+   filter: grayscale(0.8) opacity(0.95);
 }
 
 .card__image_filter_saturate {
    filter: saturate(250%);
 }
 
-.card__image_filter_purple {
-  filter: grayscale(0.5) hue-rotate(270deg) contrast(1.15) brightness(0.95);
+.card__image_filter_invert {
+  filter:invert(0.8);
 }
 
 .card__image_filter_sepia {
   filter:sepia(80%);
+}
+
+
+.footer {
+ padding-block: 50px 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.save-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  inline-size: clamp(19.125rem, 18.699rem + 1.817vw, 21rem);
+  min-block-size: 55px;
+  padding: 15px 20px;
+}
+
+.save-button__icon {
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+.button {
+  border: 2px solid #000;
+  background-color: #fff;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.button__text {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 0.9;
+}
+
+.dialog {
+ display: none;
+  padding: 0;
+  border: 2px solid #000;
+  background-color: #fff;
+  inline-size: clamp(21.313rem, 20.744rem + 2.423vw, 22.5rem);
+}
+.dialog[open] {
+  display: grid;
+}
+
+.dialog__form {
+padding: 30px;
+  display: grid;
+  gap: 30px;
+}
+
+.dialog__content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.dialog__icon {
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+.dialog__text {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.dialog__button {
+  inline-size: 100%;
+  min-block-size: 38px;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.letter__space{
+  letter-spacing: 1.7%;
 }
