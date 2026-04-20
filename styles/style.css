@@ -99,11 +99,9 @@ gap: 50px;
     0 -1px var(--label-stroke-color);
 }
 
-@supports ((
+@supports (
       (text-stroke: 1px var(--themes-backgroud-color)) or
         (-webkit-text-stroke: 1px var(--themes-backgroud-color))
-    )
-    and (mix-blend-mode: hard-light)
 ) 
 {
   .card__image-label {
@@ -184,9 +182,20 @@ aspect-ratio: 1/1;
   filter:sepia(80%);
 }
 
+.card__image_filter_purple {
+  filter: hue-rotate(40deg);
+}
+
+.card__image_filter_blur{
+  filter: blur(9px);
+}
+
+.card__image_filter_warm {
+  filter:hue-rotate(100deg) opacity(60%) contrast(1.5) blur(1.5px);
+}
 
 .footer {
- padding-block: 50px 100px;
+ padding-block: 1px 100px;
   display: flex;
   justify-content: center;
 }
@@ -198,8 +207,7 @@ aspect-ratio: 1/1;
   justify-content: center;
   gap: 8px;
   inline-size: clamp(19.125rem, 18.699rem + 1.817vw, 21rem);
-  min-block-size: 55px;
-  padding: 15px 20px;
+  min-block-size: 85px;
 }
 
 .save-button__icon {
@@ -254,9 +262,13 @@ padding: 30px;
   font-family: var(--accent-font);
   font-size: 14px;
   line-height: 1.5;
+  text-transform: uppercase;
 }
 
 .dialog__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inline-size: 100%;
   min-block-size: 38px;
 }
@@ -275,4 +287,7 @@ padding: 30px;
 
 .letter__space{
   letter-spacing: 1.7%;
+}
+body:has(.dialog[open]){
+  overflow: hidden;
 }
