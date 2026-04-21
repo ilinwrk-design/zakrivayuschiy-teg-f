@@ -232,6 +232,7 @@ aspect-ratio: 1/1;
 .button:hover::before {
   translate: 0;
 }
+
 .button:focus {
   outline: none;
 }
@@ -303,11 +304,19 @@ padding: 30px;
 .letter__space{
   letter-spacing: 1.7%;
 }
+
 body:has(.dialog[open]){
   overflow: hidden;
+  padding-inline-end: 15px;
 }
 
+.like-icon {
+  display: block;
+}
 
+.sparks {
+  opacity: 0;
+}
 
 
 @media (width >=375px) {
