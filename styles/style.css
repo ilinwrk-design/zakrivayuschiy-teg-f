@@ -412,6 +412,6 @@ body:has(.dialog[open]) {
     block-size: 28px;
   }
   .dialog__form {
-  padding: 30px 40px;
-}
+    padding: 30px 40px;
+  }
 }
