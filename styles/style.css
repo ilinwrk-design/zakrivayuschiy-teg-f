@@ -13,7 +13,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font);
+  font-family: var(--main-font), Arial, sans-serif;
   font-variation-settings: "wght" var(--text-weight);
   background-image: var(--page-background);
   background-attachment: fixed;
@@ -37,9 +37,22 @@
   gap: 20px;
 }
 
+.header__logo-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header__logo-link:focus {
+  outline: none;
+}
+.header__logo-link:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
 .header__title,
 .header__subtitle {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), Arial, sans-serif;
   text-transform: uppercase;
 }
 
@@ -61,7 +74,6 @@
 .card {
   background-color: #fff;
   border: 2px solid #000;
-  margin-block-end: 47px;
 }
 
 .card__title {
@@ -81,7 +93,7 @@
   position: absolute;
   inset-block-start: 25px;
   inset-inline-end: 25px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), Arial, sans-serif;
   font-size: 14px;
   line-height: 1;
   opacity: 0.5;
@@ -123,6 +135,7 @@
   padding: 25px;
   display: flex;
   flex-direction: column;
+  line-height: 21px;
   gap: 25px;
 }
 
@@ -135,7 +148,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 7px;
+  gap: 12px;
 }
 
 .card__icon-button {
@@ -181,7 +194,7 @@
   filter: hue-rotate(100deg) opacity(60%) contrast(1.5) blur(1.5px);
 }
 
-.footer {
+.save-block {
   padding-block: 1px 100px;
   display: flex;
   justify-content: center;
@@ -192,9 +205,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   gap: 8px;
   inline-size: clamp(19.125rem, 18.699rem + 1.817vw, 21rem);
-  min-block-size: 85px;
+  min-block-size: 55px;
 }
 
 .save-button__icon {
@@ -202,6 +216,9 @@
   z-index: 1;
   color: var(--button-text-color);
   mix-blend-mode: difference;
+  flex-shrink: 0;
+  inline-size: 21px;
+  block-size: 21px;
   flex-shrink: 0;
 }
 
@@ -240,7 +257,7 @@
 .button__text {
   position: relative;
   z-index: 1;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   color: var(--button-text-color);
   mix-blend-mode: difference;
@@ -276,7 +293,7 @@
 }
 
 .dialog__text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
@@ -288,6 +305,7 @@
   align-items: center;
   inline-size: 100%;
   min-block-size: 38px;
+  text-transform: uppercase;
 }
 
 .dialog::backdrop {
@@ -305,9 +323,10 @@ body:has(.dialog[open]) {
 
 .like-icon {
   display: block;
+}
+.heart {
   transform-origin: center;
 }
-
 .contour {
   fill: var(--contour-color);
   transition: fill 0.1s linear;
@@ -383,9 +402,16 @@ body:has(.dialog[open]) {
   object-position: center;
 }
 
-@media (width >=375px) {
+@media (width <=375px) {
   .save-button {
-    flex-direction: row;
-    min-block-size: 55px;
+    flex-direction: column;
+    min-block-size: 85px;
   }
+  .save-button__icon {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+  .dialog__form {
+  padding: 30px 40px;
+}
 }
