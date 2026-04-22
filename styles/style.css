@@ -145,10 +145,6 @@
   cursor: pointer;
 }
 
-.like-icon {
-  display: block;
-}
-
 .card__like-button {
   min-inline-size: 130px;
   min-block-size: 38px;
