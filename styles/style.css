@@ -87,6 +87,7 @@
   border-block-start: 2px solid #000;
   border-block-end: 2px solid #000;
   overflow: hidden;
+  margin: 0;
 }
 
 .card__image-label {
@@ -215,7 +216,6 @@
   z-index: 1;
   color: var(--button-text-color);
   mix-blend-mode: difference;
-  flex-shrink: 0;
   inline-size: 21px;
   block-size: 21px;
   flex-shrink: 0;
