@@ -206,7 +206,6 @@
   justify-content: center;
   flex-direction: row;
   gap: 8px;
-  inline-size: clamp(19.125rem, 18.699rem + 1.817vw, 21rem);
   min-block-size: 55px;
   inline-size: 336px;
 }
