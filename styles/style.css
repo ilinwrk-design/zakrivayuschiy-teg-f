@@ -78,7 +78,7 @@
 .card__title {
   font-variation-settings: "wght" var(--title-weight);
   font-size: 18px;
-  padding: 4px 10px 6px;
+  padding: 4px 10px 3px;
 }
 
 .card__image-wrapper {
@@ -141,14 +141,13 @@
 
 .card__text {
   font-size: 18px;
-  letter-spacing: 3.7%;
 }
 
 .card__buttons {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 12px;
+  gap: 4px;
 }
 
 .card__icon-button {
@@ -195,7 +194,7 @@
 }
 
 .save-block {
-  padding-block: 1px 100px;
+  padding-block: 0 100px;
   display: flex;
   justify-content: center;
 }
